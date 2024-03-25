@@ -10,8 +10,7 @@ from PageObjectModels.GuestOperations import GuestOperations
 from PageObjectModels.LoginPageObjectModels import LoginPageObjectModels
 
 
-# g10858167@gmail.com
-# Ntt123456.
+
 @pytest.mark.run(order=3)
 class TestGuestOperations:
     def test_guest_operations(self,setup):
@@ -31,11 +30,11 @@ class TestGuestOperations:
         self.vo.click_google()
         sleep(3)
 
-        self.lg.setEmail("g10858167@gmail.com")
+        self.lg.setEmail("gmail")
         sleep(3)
         self.lg.clicknext()
         sleep(3)
-        self.lg.setPassword("Ntt123456.")
+        self.lg.setPassword("password")
         sleep(3)
         self.lg.clicksecondnext()
         sleep(3)
