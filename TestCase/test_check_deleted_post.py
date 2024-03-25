@@ -24,11 +24,11 @@ class TestGuestOperations:
 
         self.lg = LoginPageObjectModels(self.driver)
 
-        self.lg.setEmail("ylmz.aysegl1@gmail.com")
+        self.lg.setEmail("gmail")
         sleep(3)
         self.lg.clicknext()
         sleep(3)
-        self.lg.setPassword("Ayseyilmaz58.")
+        self.lg.setPassword("password")
         sleep(3)
         self.lg.clicksecondnext()
         sleep(3)
