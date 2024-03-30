@@ -21,25 +21,32 @@ class GuestOperations:
         self.driver = driver
 
     def post_visibility(self):
+        """Checks the post visibility:
+            return bool:Return true if post visible"""
         post = self.driver.find_element(By.ID,self.featured_post_id)
         return bool(post)
 
     def add_comment(self):
-        # Yeni sekmedeki yorum ekleme butonuna tıkla
+        """Click to add comment button"""
         self.driver.find_element(By.CSS_SELECTOR, self.add_comment_css).click()
 
     def click_google(self):
+        """Click to open with google button"""
         self.driver.find_element(By.CSS_SELECTOR,self.sign_in_google).click()
 
     def switch_iframe(self):
+        """Switch to post iframe"""
         iframe = self.driver.find_element(By.NAME, "comment-editor")
         self.driver.switch_to.frame(iframe)
 
     def enter_comment(self,example_comment):
+        """Enter comment text to comment box:
+            param str index:Comment text you want to enter"""
         comment_box = self.driver.find_element(By.CSS_SELECTOR,self.new_comment)
         comment_box.send_keys(example_comment)
 
     def publish(self):
+        """Click publish button"""
         self.driver.find_element(By.CSS_SELECTOR,self.publish_button).click()
 
 

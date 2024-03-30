@@ -3,7 +3,9 @@ from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC, wait
+import logging
 import pyperclip
+from Configuration import config,BaseFunctions
 
 class AdminDeleteComment:
 
@@ -16,19 +18,24 @@ class AdminDeleteComment:
     #Constructors
     def __init__(self, driver):
         self.driver = driver
+        self.logger = logging.getLogger(__name__)
     #Actions
 
     def view_blog(self):
+        """Click comments button"""
         self.driver.find_element(By.XPATH,self.view_blog_button_xpath).click()
 
     def click_test(self):
+        """Click comment element in list"""
         self.driver.find_element(By.XPATH,self.successed_test).click()
 
     def click_delete(self):
+        """Click delete icon"""
         element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, self.delete_xpath)))
         element.click()
 
     def accept_delete(self):
+        """Click accept delete button"""
         self.driver.find_element(By.XPATH,self.accept_delete_button_xpath).click()
 
 
