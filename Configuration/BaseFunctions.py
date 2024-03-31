@@ -1,5 +1,6 @@
 import inspect
 import os
+import logging
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -10,17 +11,14 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver.support.wait import WebDriverWait
 
 
+
 def element_fail(self, locatorType, locator):
     try:
-        # Belirli bir süre boyunca elementi ara
-        element = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((getattr(By, locatorType), locator)))
-        return element
-
+        element = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((locatorType, locator)))
     except TimeoutException:
         take_screenshot(self)
     except NoSuchElementException:
         take_screenshot(self)
-
 
 def take_screenshot(self, method=None):
     # Hata mesajının olduğu yerin ekran görüntüsünü alın

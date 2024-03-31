@@ -1,7 +1,7 @@
 import pytest
 from selenium import webdriver
 
-
+import logging
 @pytest.fixture()
 def setup():
 
@@ -26,3 +26,4 @@ def setup():
         driver = webdriver.Chrome(options = options)
 
         return driver
+

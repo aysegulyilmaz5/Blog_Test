@@ -80,29 +80,29 @@ class TestEditBlog:
 
         logger.info("10.Select image and resize image")
         self.eb.access_image()
-        sleep(3)
+
 
         logger.info("11. Entered text to iframe")
         text = config.text
         self.eb.access_textbox(text)
-        sleep(3)
+
 
         logger.info("12. Switch to default content")
         self.eb.default_content()
-        sleep(3)
+
 
         logger.info("13. Entered title to post")
         example_title = config.example_title
         self.eb.addtitle(example_title)
-        sleep(3)
+
 
         logger.info("14.Clicked update button")
         self.eb.click_update()
-        sleep(3)
+
 
         logger.info("15. Clicked review button")
         self.eb.click_review_button()
-        sleep(3)
+
 
         logger.info("16. Browser closed successfully")
         self.tearDown()

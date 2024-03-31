@@ -1,4 +1,6 @@
 import pytest
+from selenium.webdriver.support.wait import WebDriverWait
+
 from Configuration import config
 import logging
 
@@ -50,38 +52,36 @@ class TestCheckDeletedPosts:
 
         logger.info("3. Email entered successfully")
         self.lg.setEmail(adm_email)
-        sleep(3)
 
         logger.info("4. Clicked next button")
         self.lg.clicknext()
-        sleep(3)
+
 
         logger.info("5. Password entered successfully")
         self.lg.setPassword(adm_passwordd)
-        sleep(3)
+
 
         logger.info("6. Clicked next button")
         self.lg.clicksecondnext()
-        sleep(3)
+
 
         self.cdp = CheckDeletedPost(self.driver)
 
         logger.info("7. Counted pre posts")
         pre_count = self.cdp.pre_post_count()
-        sleep(3)
+
 
         logger.info("8.Deleted post")
         self.cdp.delete_post()
-        sleep(3)
+
+
+
 
         logger.info("9. Counted post posts")
         post_count = self.cdp.post_post_count()
 
         logger.info("10. Checked deleted post")
-        if pre_count - post_count == 1:
-            assert True
-        else:
-            assert False
+        assert pre_count == post_count - 1, "Pre count and post count are not as expected"
 
         logger.info("11. Browser closed successfully")
         self.tearDown()

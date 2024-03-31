@@ -1,8 +1,8 @@
-2024-03-30 13:08:05,817 - test_create_blog - INFO - 1.Browser opened successfully visit blogger.com
-2024-03-30 13:08:07,503 - test_create_blog - INFO - 2. Maximized window
-2024-03-30 13:08:07,644 - test_create_blog - INFO - 3.Clicked login
-2024-03-30 13:08:07,712 - test_create_blog - INFO - 4.Email entered successfully
-2024-03-30 13:08:10,979 - test_create_blog - INFO - 5.Clicked next button
-2024-03-30 13:08:11,223 - test_create_blog - INFO - 6. Password entered successfully
-2024-03-30 13:08:14,748 - test_create_blog - INFO - 7. Clicked next button
-2024-03-30 13:08:15,082 - test_create_blog - INFO - 8.Opened blog
+2024-04-01 02:20:16,908 - test_check_deleted_post - INFO - 1.Browser opened succesfully visit blogger.com
+2024-04-01 02:20:17,032 - test_check_deleted_post - INFO - 2.Browser maximized
+2024-04-01 02:20:17,035 - test_check_deleted_post - INFO - 3. Email entered successfully
+2024-04-01 02:20:17,196 - test_check_deleted_post - INFO - 4. Clicked next button
+2024-04-01 02:20:17,509 - test_check_deleted_post - INFO - 5. Password entered successfully
+2024-04-01 02:20:21,609 - test_check_deleted_post - INFO - 6. Clicked next button
+2024-04-01 02:20:21,903 - test_check_deleted_post - INFO - 7. Counted pre posts
+2024-04-01 02:20:31,981 - test_check_deleted_post - INFO - 8.Deleted post

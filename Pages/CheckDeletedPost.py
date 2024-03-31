@@ -37,12 +37,12 @@ class CheckDeletedPost:
         """Take posts count:
             Return number index : Post-Post count number"""
         posts = self.driver.find_elements(By.CLASS_NAME, "yGrhUb")
+        WebDriverWait(self.driver, 10).until(EC.staleness_of(posts))
         if not posts:
             post_count_second = 0
         else:
             post_count_second = len(posts)
         return post_count_second
-
 
 
 

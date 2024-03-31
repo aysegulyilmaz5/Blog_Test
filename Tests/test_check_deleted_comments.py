@@ -37,7 +37,6 @@ class TestCheckDeletedComments:
         logger.info("3. Window Maximized")
         self.driver.maximize_window()
 
-        self.driver.implicitly_wait(10)
 
         logger.info("4.Browser opened successfully!")
 

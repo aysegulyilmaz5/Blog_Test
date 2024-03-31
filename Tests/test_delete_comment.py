@@ -50,23 +50,23 @@ class TestDeleteComment:
 
         logger.info("3.Clicked login button")
         self.lg.clickLogin()
-        sleep(3)
+
 
         logger.info("4. Email entered successfully")
         self.lg.setEmail(adm_email)
-        sleep(3)
+
 
         logger.info("5. Clicked next button")
         self.lg.clicknext()
-        sleep(3)
+
 
         logger.info("6. Password entered succesfully")
         self.lg.setPassword(adm_passwordd)
-        sleep(3)
+
 
         logger.info("7. Clicked next button")
         self.lg.clicksecondnext()
-        sleep(3)
+
 
         logger.info("8.Clicked view blog button")
         self.dc.view_blog()
@@ -75,15 +75,15 @@ class TestDeleteComment:
 
         logger.info("9. Clicked comment button")
         self.dc.click_test()
-        sleep(3)
+
 
         logger.info("10. Clicked delete icon")
         self.dc.click_delete()
-        sleep(3)
+
 
         logger.info("11. Clicked accept delete button")
         self.dc.accept_delete()
-        sleep(3)
+
 
         logger.info("12.Browser closed successfully")
         self.tearDown()
