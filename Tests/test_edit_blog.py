@@ -23,8 +23,7 @@ class TestEditBlog:
         11.Switch to default content
         12.Enter title to post
         13.Click update button
-        14.Click review button
-        15.Close Browser"""
+        14.Close Browser"""
     def test_edit_blog(self,setup):
         self.driver = setup
 
@@ -98,11 +97,6 @@ class TestEditBlog:
 
         logger.info("14.Clicked update button")
         self.eb.click_update()
-
-
-        logger.info("15. Clicked review button")
-        self.eb.click_review_button()
-
 
         logger.info("16. Browser closed successfully")
         self.tearDown()

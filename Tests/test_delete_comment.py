@@ -83,6 +83,7 @@ class TestDeleteComment:
 
         logger.info("11. Clicked accept delete button")
         self.dc.accept_delete()
+        sleep(1)
 
 
         logger.info("12.Browser closed successfully")

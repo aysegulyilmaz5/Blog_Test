@@ -16,13 +16,6 @@ class CheckDeletedPost:
     def __init__(self, driver):
         self.driver = driver
 
-    def pre_post_count(self):
-        """Take posts count:
-            Return number index : Pre-Post count number"""
-        posts = self.driver.find_elements(By.CLASS_NAME, "yGrhUb")
-        post_count = len(posts)
-        return post_count
-
     def delete_post(self):
         """Come on post and click delete icon,click trash button"""
         action = ActionChains(self.driver)
@@ -36,8 +29,7 @@ class CheckDeletedPost:
     def post_post_count(self):
         """Take posts count:
             Return number index : Post-Post count number"""
-        posts = self.driver.find_elements(By.CLASS_NAME, "yGrhUb")
-        WebDriverWait(self.driver, 10).until(EC.staleness_of(posts))
+        posts = self.driver.find_elements(By.XPATH, "(//div[@class='gNK4lf'])")
         if not posts:
             post_count_second = 0
         else:

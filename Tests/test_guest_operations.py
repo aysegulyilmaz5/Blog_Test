@@ -43,8 +43,9 @@ class TestGuestOperations:
         logger.info("2. Maximized window")
         self.driver.maximize_window()
 
-        self.lg = LoginPageObjectModels(self.driver)
+
         self.vo = GuestOperations(self.driver)
+        self.lg = LoginPageObjectModels(self.driver)
 
         logger.info("3. Clicked add comment button ")
         self.vo.add_comment()
@@ -53,40 +54,37 @@ class TestGuestOperations:
         logger.info("4.Switched to iframe")
         self.vo.switch_iframe()
 
-
         logger.info("5.Clicked login with google button")
         self.vo.click_google()
+        sleep(1)
 
-        email_guest = config.guest_email
-        pass_guest = config.guest_password
+        self.driver.switch_to.default_content()
 
         logger.info("6.Email entered successfully")
-        self.lg.setEmail(email_guest)
+        self.lg.setEmail(config.guest_email)
 
         logger.info("7.Clicked next button")
         self.lg.clicknext()
 
         logger.info("8.Password entered successfully")
-        self.lg.setPassword(pass_guest)
-
+        self.lg.setPassword(config.guest_password)
 
         logger.info("9.Clicked next button")
         self.lg.clicksecondnext()
-
+        sleep(1)
 
         logger.info("10.Switched to iframe")
         self.vo.switch_iframe()
-        sleep(3)
-
 
         logger.info("11. Entered example comment successfully")
+        sleep(1)
         example_comment = config.example_comment
         self.vo.enter_comment(example_comment)
 
 
         logger.info("12. Clicked to publish button")
         self.vo.publish()
-
+        sleep(1)
 
         logger.info("13. Browser closed successfully")
         self.tearDown()

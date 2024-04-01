@@ -16,7 +16,6 @@ class EditBlog:
     image_xpath = "//img[@data-original-height='145']"
     title_box_xpath = "(//input[@aria-label='Başlık'])[1]"
     update_button_xpath = "//div[@aria-label='Güncelle']//div[@class='A2yzVd']"
-    review_button_xpath = "//div[@aria-label='Yayını önizle']//span[@class='CwaK9']"
 
     # Variables
 
@@ -68,10 +67,7 @@ class EditBlog:
         element_fail(self,"xpath",self.update_button_xpath)
         self.driver.find_element(By.XPATH,self.update_button_xpath).click()
 
-    def click_review_button(self):
-        """Click review button"""
-        element_fail(self,"xpath",self.review_button_xpath)
-        self.driver.find_element(By.XPATH,self.review_button_xpath).click()
+
 
 
 

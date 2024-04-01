@@ -68,20 +68,25 @@ class TestCheckDeletedPosts:
         self.cdp = CheckDeletedPost(self.driver)
 
         logger.info("7. Counted pre posts")
-        pre_count = self.cdp.pre_post_count()
+        pre_count = self.cdp.post_post_count()
 
 
         logger.info("8.Deleted post")
         self.cdp.delete_post()
+        sleep(2)
 
-
-
+        self.driver.refresh()
 
         logger.info("9. Counted post posts")
         post_count = self.cdp.post_post_count()
 
+
         logger.info("10. Checked deleted post")
-        assert pre_count == post_count - 1, "Pre count and post count are not as expected"
+        #assert pre_count - 1 == post_count, "Pre count and post count are not as expected"
+        if pre_count - post_count == 1:
+            assert True
+        else:
+            assert False
 
         logger.info("11. Browser closed successfully")
         self.tearDown()

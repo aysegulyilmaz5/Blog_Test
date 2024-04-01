@@ -88,7 +88,7 @@ class TestCreateBlog:
         picture_url = config.create_blog_picture_url
         logger.info("11. Switch frame & Downloading url")
         self.cbl.file_download(picture_url)
-
+        sleep(2)
 
         logger.info("12. Url entered successfully")
         self.cbl.select_button()
@@ -104,6 +104,7 @@ class TestCreateBlog:
 
         logger.info("15. Clicked confirm button")
         self.cbl.confirm_button()
+        sleep(1)
 
 
         logger.info("16.Browser closed successfully")

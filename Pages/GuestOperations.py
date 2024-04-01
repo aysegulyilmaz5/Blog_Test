@@ -41,8 +41,8 @@ class GuestOperations:
 
     def switch_iframe(self):
         """Switch to post iframe"""
-        element_fail(self,"xpath","//iframe[@id='comment-editor']")
-        iframe = self.driver.find_element(By.XPATH, "//iframe[@id='comment-editor']")
+        sleep(1)
+        iframe = self.driver.find_element(By.NAME, "comment-editor")
         self.driver.switch_to.frame(iframe)
         sleep(3)
 

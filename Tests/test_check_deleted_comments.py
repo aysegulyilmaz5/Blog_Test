@@ -3,6 +3,7 @@ from Configuration import config
 import logging
 
 from Pages.GuestOperations import GuestOperations
+from time import sleep
 
 # g10858167@gmail.com
 # Ntt123456.
@@ -45,6 +46,7 @@ class TestCheckDeletedComments:
 
         logger.info("5.Check post visibility")
         assert self.pv.post_visibility()
+        sleep(1)
 
         logger.info("6.Browser closed successfully!")
         self.tearDown()
