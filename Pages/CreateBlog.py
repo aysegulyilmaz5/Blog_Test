@@ -6,6 +6,9 @@ import pyperclip
 
 
 class CreateBlog:
+
+
+    ####
     button_blog_id = "(//span[@class='MIJMVe'][contains(text(),'Yeni Yayın')])[2]"
     picture_id = "(//span[@class='DPvwYc sm8sCf GHpiyd'][contains(text(),'')])[1]"
     url_download_id = "div[class='JPdR6b e5Emjc qjTEB'] span[aria-label='URL ile']"
