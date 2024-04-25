@@ -1,8 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC, wait
 import pyperclip
 from Configuration.BaseFunctions import element_fail,take_screenshot
 from time import sleep

@@ -29,6 +29,7 @@ class TestCreateBlog:
         15.Close browser"""
 
     def test_create_blog(self,setup):
+        logger.info(" 1.Open browser and visit blogger.com")
         self.driver = setup
 
         filehandler = logging.FileHandler(filename="example.log", mode='w')
@@ -38,8 +39,8 @@ class TestCreateBlog:
         logger.setLevel(logging.INFO)
 
         main_url = config.main_page_url
-        logger.info("1.Browser opened successfully visit blogger.com")
         self.driver.get(main_url)
+        logger.info("Browser opened successfully visit blogger.com")
 
         logger.info("2. Maximized window")
         self.driver.maximize_window()
@@ -57,14 +58,17 @@ class TestCreateBlog:
 
 
         logger.info("4.Email entered successfully")
+
         self.lg.setEmail(adm_email)
 
 
         logger.info("5.Clicked next button")
+
         self.lg.clicknext()
 
 
         logger.info("6. Password entered successfully")
+
         self.lg.setPassword(adm_passwordd)
 
 

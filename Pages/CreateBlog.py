@@ -1,11 +1,9 @@
-from selenium import webdriver
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC, wait
-from Configuration.BaseFunctions import element_fail,take_screenshot
+from Configuration.BaseFunctions import element_fail
 from time import sleep
 import pyperclip
+
 
 class CreateBlog:
     button_blog_id = "(//span[@class='MIJMVe'][contains(text(),'Yeni Yayın')])[2]"
@@ -53,5 +51,6 @@ class CreateBlog:
         self.driver.find_element(By.XPATH, self.publish_button_xpath).click()
 
     def confirm_button(self):
+
         element_fail(self, "xpath", self.confirm_button_xpath)
         self.driver.find_element(By.XPATH, self.confirm_button_xpath).click()

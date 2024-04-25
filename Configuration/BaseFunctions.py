@@ -21,13 +21,12 @@ def element_fail(self, locatorType, locator):
         take_screenshot(self)
 
 def take_screenshot(self, method=None):
-    # Hata mesajının olduğu yerin ekran görüntüsünü alın
     if method is None:
-        method = inspect.stack()[2].function  # Çağrıldığı methodun üstündeki methodun adını alın [x] x kadar üstteki parent method
+        method = inspect.stack()[2].function
         file_name = f"C:\\Users\\10132593\\PycharmProjects\\TestOtomasyonProje2\\Screenshot\\Screenshoot_{method}.png"
         self.driver.save_screenshot(file_name)
     else:
-        method = inspect.stack()[1].function  # Çağrıldığı methodun üstündeki methodun adını alın [x] x kadar üstteki parent method
+        method = inspect.stack()[1].function
         file_name = f"C:\\Users\\10132593\\PycharmProjects\\TestOtomasyonProje2\\Screenshot\\Screenshoot_{method}.png"
         self.driver.save_screenshot(file_name)
     print(f"Ekran görüntüsü '{file_name}' olarak kaydedildi.")

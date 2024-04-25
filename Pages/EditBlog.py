@@ -2,10 +2,9 @@ from enum import Enum
 
 from selenium.common import TimeoutException, NoSuchElementException
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+
 from Configuration import config
-from Configuration.BaseFunctions import element_fail,take_screenshot
+from Configuration.BaseFunctions import element_fail
 from time import sleep
 
 
@@ -43,11 +42,11 @@ class EditBlog:
         image = self.driver.find_element(By.XPATH,self.image_xpath)
         self.driver.execute_script("arguments[0].style.height = '600px'; arguments[0].style.width = '600px';",image)
 
-    def access_textbox(self,text):
+    def access_textbox(self, text):
         """Add text to textbox:
-            param str index:Text you want to enter"""
-        element_fail(self,"xpath",self.textBoxView_xpath)
-        textbox = self.driver.find_element(By.XPATH,self.textBoxView_xpath)
+            param str text:Text you want to enter"""
+        element_fail(self, "xpath", self.textBoxView_xpath)
+        textbox = self.driver.find_element(By.XPATH, self.textBoxView_xpath)
         textbox.send_keys(text)
 
     def default_content(self):

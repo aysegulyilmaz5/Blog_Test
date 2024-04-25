@@ -1,2 +1,2 @@
-2024-04-01 12:57:33,930 - test_create_blog - INFO - 1.Browser opened successfully visit blogger.com
-2024-04-01 12:57:35,552 - test_create_blog - INFO - 2. Maximized window
+2024-04-08 19:20:43,826 - test_edit_blog - INFO - 1.Browser opened successfully
+2024-04-08 19:20:44,611 - test_edit_blog - INFO - 2.Maximized window
