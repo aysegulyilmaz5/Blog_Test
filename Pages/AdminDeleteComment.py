@@ -11,6 +11,8 @@ from Configuration.BaseFunctions import element_fail
 
 class AdminDeleteComment:
 
+    #Admin delete to guest comment
+
     #Locators
     view_blog_button_xpath = "//*[@id='yDmH0d']/c-wiz/div[1]/gm-raised-drawer/div/div[2]/div/c-wiz/div[5]/span[3]/div[2]"
     successed_test_xpath = "//*[@id='yDmH0d']/c-wiz[2]/div[2]/div/c-wiz/div[2]/c-wiz/div/div/div/div[1]/span/div/div/div[2]/div[2]/div/div[1]"
