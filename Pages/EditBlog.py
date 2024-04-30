@@ -7,7 +7,7 @@ from Configuration import config
 from Configuration.BaseFunctions import element_fail
 from time import sleep
 
-
+#deneme3
 class EditBlog:
     # Locators
     click_post_xpath = "//div[contains(@class, 'LgQiCc') and contains(@class, 'vOSR6b') and contains(@class, 'oqIa7e')]"
