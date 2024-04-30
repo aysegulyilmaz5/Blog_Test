@@ -74,6 +74,7 @@ class TestCreateBlog:
 
         logger.info("7. Clicked next button")
         self.lg.clicksecondnext()
+        sleep(1)
 
 
         logger.info("8.Opened blog")
