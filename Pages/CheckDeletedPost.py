@@ -8,7 +8,7 @@ import pyperclip
 from time import sleep
 
 class CheckDeletedPost:
-
+    #deneme2
     deleted_post = "//*[@id='yDmH0d']/c-wiz/div[2]/div/c-wiz/div[2]/c-wiz/div/div/div/div[1]/div"
     delete_icon_xpath ="(//span[@class='DPvwYc'][contains(text(),'')])[2]"
     move_to_trash_button = "//*[@id='yDmH0d']/div[4]/div/div[2]/div[3]/div[2]/span/span"
