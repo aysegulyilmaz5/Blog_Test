@@ -22,7 +22,7 @@ class AdminDeleteComment:
     #Constructors
     def __init__(self, driver):
 
-
+        #deneme
         self.driver = driver
         self.logger = logging.getLogger(__name__)
     #Actions
