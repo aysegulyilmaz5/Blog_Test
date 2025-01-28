@@ -1,10 +1,10 @@
 import configparser
 
-admin_email = "ylmz.aysegl1@gmail.com"
-admin_password = "Ayseyilmaz58."
+admin_email = "email"
+admin_password = "password"
 
-guest_email = "g10858167@gmail.com"
-guest_password = "Ntt123456."
+guest_email = "guestemail"
+guest_password = "guestpassword"
 
 create_blog_picture_url ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJBRaZADlwDwI2UIsll_wdST_C_6-Q8WIjMjmoNTrbDQ&s"
 
